@@ -1,1 +1,12 @@
+/* css/layout.css */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  padding: 24px;
+}
 
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
