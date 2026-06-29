@@ -1,1 +1,6 @@
-
+/* css/variables.css */
+:root {
+  --bg: #07131f;
+  --text: #f5f7fa;
+  --gold: #d6b15f;
+}
