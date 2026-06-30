@@ -3,14 +3,10 @@ import { render } from "./render.js";
 import { HomePage } from "./pages/home.js";
 
 async function init() {
-  const tournament = await api.getTournament();
-  const leaderboard = await api.getLeaderboard();
+  const homeData = await api.getHomePage();
 
   render(
-    HomePage({
-      tournament,
-      leaderboard
-    })
+    HomePage(homeData)
   );
 }
 
