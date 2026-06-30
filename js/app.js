@@ -1,5 +1,5 @@
 import { api } from "./api.js";
-import { LeaderboardList } from "./components.js";
+import { LeaderboardList } from "./components/leaderboard.js";
 
 async function init() {
   const tournament = await api.getTournament();
