@@ -7,6 +7,7 @@ export const api = {
       status: "planning"
     };
   },
+  
 
   async getLeaderboard() {
     return [
@@ -14,5 +15,14 @@ export const api = {
       { id: "javier", name: "Javier", points: 39 },
       { id: "gaby", name: "Gaby", points: 34 }
     ];
+  },
+ async getHomePage() {
+    const tournament = await this.getTournament();
+    const leaderboard = await this.getLeaderboard();
+
+    return {
+      tournament,
+      leaderboard
+    };
   }
 };
