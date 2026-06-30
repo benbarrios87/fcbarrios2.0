@@ -1,5 +1,5 @@
-// js/app.js
 import { api } from "./api.js";
+import { LeaderboardList } from "./components.js";
 
 async function init() {
   const tournament = await api.getTournament();
@@ -10,14 +10,7 @@ async function init() {
       <h1>FC Barrios</h1>
       <p>${tournament.name}</p>
 
-      <section>
-        <h2>🏆 Leaderboard</h2>
-        <ol>
-          ${leaderboard.map(player => `
-            <li>${player.name} – ${player.points} poeng</li>
-          `).join("")}
-        </ol>
-      </section>
+      ${LeaderboardList(leaderboard)}
     </main>
   `;
 }
